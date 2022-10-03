@@ -9,5 +9,6 @@ module.exports = async (req, res) => {
     };
 
     await db.storeItem(item);
-    res.send(item);
+    res.send(item)
+    console.log(item.id);
 };
