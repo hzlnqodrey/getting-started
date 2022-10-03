@@ -8,7 +8,7 @@ COPY . .
 
 RUN yarn install --production
 
-RUN chown -R node /usr/app/node_modules
+RUN chown -R node /app/node_modules
 
 CMD ["node", "src/index.js"]
 
