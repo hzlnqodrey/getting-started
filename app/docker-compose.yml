@@ -4,8 +4,8 @@ services:
     image: node:12-alpine
     command: sh -c "yarn install && yarn run dev"
     ports:
-      - target: 8000
-        published: 8080
+      - target: 5000
+        published: 5050
         protocol: tcp
         mode: host
     working_dir: /app
@@ -24,3 +24,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: todos
+
+volumes:
+  todo-mysql-data:
